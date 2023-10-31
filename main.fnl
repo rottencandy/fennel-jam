@@ -68,7 +68,7 @@
   "Returns true every time `interval` ticks have passed"
   (var ticks 0)
   (fn []
-    (set ticks (+ ticks 1))
+    (++! ticks)
     (if (> ticks interval)
       (do
         (set ticks 0)
